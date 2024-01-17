@@ -6,18 +6,26 @@ namespace Survey
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is your name?");
+            Console.WriteLine("What's your name?");
             var name = Console.ReadLine();
 
-            Console.WriteLine("What is your age?");
+            Console.WriteLine("How old are you?");
             var age = Console.ReadLine();
 
-            Console.WriteLine("What month were you born in?");
+            Console.WriteLine("In what month were you born?");
             var month = Console.ReadLine();
 
-            Console.WriteLine("Your name is: {0}", name);
-            Console.WriteLine("Your age is: {0}", age);
-            Console.WriteLine("Your birth month is: {0}", month);
+            Console.WriteLine("Where were you born?");
+            var birthPlace = Console.ReadLine();
+
+            Console.WriteLine("What is your mother's name?");
+            var momName = Console.ReadLine();
+
+            Console.WriteLine($"Your name is {name}");
+            Console.WriteLine($"You are {age} years old.");
+            Console.WriteLine($"You were born in {month}");
+            Console.WriteLine($"You were born in the city of {birthPlace}");
+            Console.WriteLine($"Your mother's name is {momName}");
         }
     }
 }
