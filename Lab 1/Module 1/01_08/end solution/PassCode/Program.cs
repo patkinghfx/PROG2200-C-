@@ -6,17 +6,29 @@ namespace PassCode
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is the pass code?");
-            var code = Console.ReadLine();
+            var code = "secret";
+            var entry = "";
+            bool hasAuth = false;
 
-            if(code == "secret")
+            do
             {
-                Console.WriteLine("Authenticated");
-            }
-            else if(code != "secret")
-            {
-                Console.WriteLine("Not Authenticated");
-            }
-        }
+                Console.WriteLine("What is the pass code?");
+                entry = Console.ReadLine();
+
+                switch (entry)
+                {
+                    case "secret":
+                        Console.WriteLine("Authorized");
+                        Console.WriteLine("Please enter your new pass code");
+                        code = Console.ReadLine();
+                        hasAuth = true;
+                        break;
+
+                    default:
+                        Console.WriteLine("Unauthorized");
+                        break;
+                }
+            } while (hasAuth == false);
+        } 
     }
 }
