@@ -27,6 +27,7 @@ namespace PassCode
                     default:
                         Console.WriteLine("Unauthorized");
                         break;
+
                 }
             } while (hasAuth == false);
         } 
